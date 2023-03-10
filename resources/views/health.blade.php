@@ -1,0 +1,143 @@
+
+<style>
+    .row content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Health Programs and Events</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="author" content="CJMM">
+
+    <!-- Favicons -->
+    <link href="{{ asset('frontend/assets/img/logo3.png') }}" rel="icon">
+    <link href="{{ asset('frontend/assets/img/logo3.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('frontend/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/css/simple-datatables.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  @include('includes.header')
+
+  <main id="main">
+
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="{{('/')}}">Home</a></li>
+          <li><a href="{{ URL::to('policies') }}">Policies</a></li>
+          <li><a href="{{ route('covid_updates') }}">Covid Updates</a></li>
+          <li><a href="{{ route('first_aid_training') }}">First Aid Trainings</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <style>
+        .img {
+            border: 5px solid #555;
+          }
+
+        .row content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <div class="section-title">
+        <hr>
+        <center><h3>HEALTH CALENDAR 2023</h3></center>
+    </div>
+    <div class="row content">
+        <center><div class="col-lg-8">
+
+            <img alt="image" src="{{ asset('frontend/assets/img/Health-Events.jpg') }}" >
+        </div></center>
+
+      </div>
+
+     {{-- <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            @php
+            $events = DB::table('health_events')->where('title',0)->orderBy('id','desc')->limit(12)->get();
+            @endphp
+
+                <div class="section-title">
+                    <h2>Health Events</h2>
+                </div>
+
+         @foreach($events as $row)
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                           <tr>
+                              <th scope="col"> {{ $row->event_month }} </th>
+                           </tr>
+                        </thead>
+
+                        <tbody>
+                           <tr>
+                              <td>{!! $row->title !!}</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                </div>
+            </div>
+
+
+            @endforeach
+        </div>
+    </section> --}}
+
+
+  </main>
+@include('includes.footer')
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script src="{{ asset('frontend/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/simple-datatables.js') }}"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+
+</body>
+
+</html>
