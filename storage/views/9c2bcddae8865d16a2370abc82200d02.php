@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\VBEHS\resources\views/safety/view_policies_manual.blade.php ENDPATH**/ ?>
